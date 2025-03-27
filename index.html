@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Biblioteca Chart.js -->
+    <script src="/socket.io/socket.io.js"></script> <!-- Biblioteca Socket.io -->
+</head>
+<body>
+    <header>
+        <h1>Controle de estoque Magazine Luiza</h1>
+        <input type="text" placeholder="Buscar produtos...">
+        <nav>
+            <ul>
+                <li><a href="#empresa">Sobre a Empresa</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Histórico da Empresa -->
+        <section class="sobre-empresa">
+            <h2>Sobre a Empresa</h2>
+            <p>Somos uma empresa inovadora, dedicada a fornecer os melhores produtos e serviços para nossos clientes. Com uma equipe altamente qualificada e sempre em busca da excelência, trabalhamos para fazer a diferença no mercado. Nossa missão é garantir a satisfação e o bem-estar de todos os nossos clientes, oferecendo qualidade e confiança.</p>
+        </section>
+        <div class="logo-empresa-container">
+             <img src="images/logo-empresa.jpg" alt="Imagem da Empresa" class="imagem-empresa">
+        </div>
+        
+       
+
+        <!-- Produtos e Serviços -->
+        <section class="produtos">
+            <h2>Produtos e Serviços</h2>
+
+            <!-- Adicionando o gráfico de estoque -->
+            <div>
+                <h3>Estoque de Produtos</h3>
+                <canvas id="grafico-estoque"></canvas>
+            </div>
+
+            <div class="produto">
+                <img src="images/tv_tcl.jpg" alt="TV TCL">
+                <h3>Smart TV TCL</h3>
+                <p>R$ 1.999,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="images/tv_samsung.jpg" alt="TV Samsung">
+                <h3>Smart Samsung</h3>
+                <p>R$ 2.499,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="images/tv_philco.jpg" alt="TV Philco">
+                <h3>Smart TV Philco</h3>
+                <p>R$ 2.299,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="images/tv_lg.jpg" alt="TV LG">
+                <h3>Smart TV LG</h3>
+                <p>R$ 1.599,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="images/tv_hisense.jpg" alt="TV Hisense">
+                <h3>Smart TV Hisense</h3>
+                <p>R$ 4.999,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="images/tv_tubo.jpg" alt="TV Tubo">
+                <h3>TV Tubo</h3>
+                <p>R$ 199,99</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Smartphones -->
+            <div class="produto">
+                <img src="images/smartphone_samsung.jpg" alt="Smartphone Samsung">
+                <h3>Smartphone Samsung</h3>
+                <p>R$ 2.599,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="images/smartphone_xiaomi.jpg" alt="Smartphone Xiaomi">
+                <h3>Smartphone Xiaomi</h3>
+                <p>R$ 1.999,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="images/smartphone_motorola.jpg" alt="Smartphone Motorola">
+                <h3>Smartphone Motorola</h3>
+                <p>R$ 1.499,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="images/iphone.jpg" alt="Iphone">
+                <h3>Iphone</h3>
+                <p>R$ 14.999,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="images/smartphone_lg_k9.jpg" alt="Smartphone LG k9">
+                <h3>Smartphone LG k9</h3>
+                <p>R$ 1.299,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="images/nokia.jpg" alt="Nokia">
+                <h3>Nokia</h3>
+                <p>R$ 299,99</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Notebooks -->
+            <div class="produto">
+                <img src="images/notebook_samsung.jpg" alt="Notebook Samsung">
+                <h3>Notebook Samsung</h3>
+                <p>R$ 5.999,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="images/notebook_dell.jpg" alt="Notebook Dell">
+                <h3>Notebook Dell</h3>
+                <p>R$ 3.499,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="images/notebook_acer.jpg" alt="Notebook Acer">
+                <h3>Notebook Acer</h3>
+                <p>R$ 2.999,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="images/macbook.jpg" alt="Macbook">
+                <h3>Macbook</h3>
+                <p>R$ 14.999,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="images/notebook_asus.jpg" alt="Notebook Asus">
+                <h3>Notebook Asus</h3>
+                <p>R$ 1.499,99</p>
+                <button>Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="images/notebook_positivo.jpg" alt="Notebook Positivo">
+                <h3>Notebook Positivo</h3>
+                <p>R$ 5.999,99</p>
+                <button>Comprar</button>
+            </div>
+        </section>
+
+        <!-- Equipe de Desenvolvimento -->
+        <section class="equipe">
+            <h2>Equipe de Desenvolvimento</h2>
+            <div class="membro">
+                <img src="images/avatar_dev1.avif" alt="Desenvolvedor 1">
+                <h3>Caroline</h3>
+                <p>Desenvolvedor Front-End e Back-End</p>
+            </div>
+            <div class="membro">
+                <img src="images/avatar_dev2.png" alt="Desenvolvedor 2">
+                <h3>Lucas </h3>
+                <p>Desenvolvedor Back-End</p>
+            </div>
+            <div class="membro">
+                <img src="images/avatar_dev3.webp" alt="Desenvolvedor 2">
+                <h3>Rubens </h3>
+                <p>Desenvolvedor Front-End</p>
+            </div>
+            <div class="membro">
+                <img src="images/avatar_dev3.jpg" alt="Desenvolvedor 4">
+                <h3>Guilherme </h3>
+                <p>Desenvolvedor Front-End</p>
+            </div>
+        </section>
+
+        <!-- Formulário de Contato -->
+        <section id="contato" class="contato">
+            <h2>Contato</h2>
+            <form action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Controle de estoque Magazine Luiza - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

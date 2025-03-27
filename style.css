@@ -1,0 +1,263 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    border: 10px solid #b01df9;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    background-color: #1212df;  /* Cor azul de fundo do header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo horizontalmente */
+    align-items: center;      /* Centraliza o conteúdo verticalmente */
+    gap: 20px;                /* Espaço entre o logo e o título */
+}
+
+/* Centraliza o container do logo na página */
+.logo-empresa-container {
+    display: flex;
+    justify-content: center;  /* Centraliza a imagem horizontalmente */
+    align-items: center;      /* Centraliza a imagem verticalmente */
+    height: 100vh;            /* Garante que o container ocupe toda a altura da página */
+}
+
+.logo-empresa {
+    width: 150px;  /* Ajuste o tamanho conforme necessário */
+    height: 150px; /* Ajuste o tamanho conforme necessário */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+header .titulo-empresa {
+    font-size: 30px;
+    color: #cdca6e;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1; /* Para garantir que o título ocupe o máximo de espaço disponível */
+}
+
+/* Barra de pesquisa */
+header input[type="text"] {
+    padding: 12px 20px;
+    width: 80%;
+    margin-top: 15px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+header input[type="text"]:focus {
+    width: 85%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Links alinhados à esquerda */
+header .links {
+    display: flex;
+    gap: 20px;
+    margin-right: 10%;
+}
+
+/* Estilo dos links */
+header .links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+header .links a:hover {
+    color: #cdca6e;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+/* Seção Sobre a Empresa */
+/* Seção Sobre a Empresa */
+.sobre-empresa {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.sobre-empresa h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.sobre-empresa p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* Seção Produtos - Agora alinhados em linha reta */
+.produtos {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    white-space: nowrap;
+    padding-bottom: 10px;
+}
+
+.produto {
+    flex: 0 0 auto;
+    width: 250px;
+    background-color: #ffffff;
+    border: 1px solid #DDDDDD;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.produto img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.produto button {
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.produto button:hover {
+    background-color: #C70039;
+    transform: scale(1.1);
+}
+
+/* Seção Equipe - Design Melhorado */
+.equipe {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding: 40px;
+    background-color: #17b1c9;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.membro {
+    text-align: center;
+    background-color: #ffffff;
+    width: 220px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membro:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.membro img {
+    width: 100%;
+    border-radius: 50%;
+    max-width: 120px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.membro h3 {
+    font-size: 1.4em;
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.membro p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Formulário de Contato */
+.contato {
+    text-align: center;
+}
+
+.contato form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contato input,
+.contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #AA006F;
+    border-radius: 5px;
+}
+
+.contato button {
+    background-color: #AA006F;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contato button:hover {
+    background-color: #800080;
+    border-radius: 50px;
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #0039aa;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
